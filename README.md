@@ -1,5 +1,6 @@
 # YouTube-Downloader
-Simple python script that downloads YouTube videos. Wrote it as an exercise to learn more about Tkinter.
+Simple python script that downloads YouTube videos.
+The UI is very ugly. This script was an exercise for me to learn about Tkinter.
 
 > [!NOTE]
 > If you provide a playlist link, the script will only download the first video. Maybe I will add an option to download the whole playlist idk at the moment this was simply an exercise.
