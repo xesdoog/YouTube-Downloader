@@ -149,8 +149,15 @@ def download_func():
 def download_thread():
     Thread(target = download_func, daemon = True).start()
 
-
-window.geometry("480x315")
+window_w = 480
+window_h = 315
+sw = window.winfo_screenwidth()
+sh = window.winfo_screenheight()
+x_pos = (sw/2) - (window_w - 200)
+y_pos = (sh/2) - (window_h - 100)
+window.geometry(
+    '%dx%d+%d+%d' % (window_w, window_h, x_pos, y_pos)
+    )
 window.configure(bg = "#FFFFFF")
 window.title("YouTube Downloader")
 window.iconbitmap(relative_to_assets('ytd_icon.ico'))
