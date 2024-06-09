@@ -51,7 +51,7 @@ jobs:
 
   create_release:
     runs-on: ubuntu-latest
-    name: Delete Old Release
+    name: Create Release
     needs: build
     steps:
       - uses: actions/checkout@v4
@@ -116,6 +116,12 @@ jobs:
               **This release has been built by Github Actions**
 
               [Link to build](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+              Build SHA256:
+              ```
+              ${{ steps.build_sha.outputs.build_sha }}
+              ```
+              To verify the build SHA256 during the action, click the build link, go-to "Create Release" on the left panel, open the "Echo build sha256" step and read the SHA256.
 
           files: |
             youtube_downloader.exe
